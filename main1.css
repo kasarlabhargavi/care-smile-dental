@@ -1,0 +1,1108 @@
+  /* Proportions, type and color sampled from the supplied 1689 × 9647 PDF. */
+  /* The PDF sets Bodoni 72 (ITC Bodoni Seventy Two) for the page and Inter for the reviews and footer. */
+
+
+  /* Site-wide type: Inter for all text, Bodoni 72 for h1–h3.
+       Pseudo-elements are left alone so Bootstrap Icons keep their icon font. */
+  * {
+      font-family: "Inter", Arial, sans-serif !important
+  }
+
+  h1,
+  h2,
+  h3,
+  h1 *,
+  h2 *,
+  h3 * {
+      font-family: "Bodoni 72", Georgia, serif !important
+  }
+
+  body {}
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .btn {}
+
+  .why.section-pad h2,
+  .services h2 {
+      color: var(--navy);
+      font-weight: 600;
+  }
+
+  .service-copy.gray,
+  .services .service-copy.gray {
+      background: var(--gray)
+  }
+
+  .services .service-copy.blue {
+      background: var(--blue)
+  }
+
+  .cta .btn-gold {
+      border-radius: 30px 12px;
+      font-size: 18px;
+      padding: 12px 42px;
+  }
+
+  /* Reviews, the insurance button and the footer are set in Inter in the PDF. */
+  .reviews,
+  .reviews h2~*,
+  .footer,
+  .footer h4,
+  .btn-white {}
+
+  .reviews h2 {
+      color: var(--navy)
+  }
+
+  /* Team: navy band with a dotted texture and a light-blue card holding the doctor, as in the PDF. */
+  .team.section-pad {
+      background: radial-gradient(circle, #0f3f6d 1.6px, transparent 2.2px) 0 0/22px 22px, var(--navy);
+      background-blend-mode: normal;
+      color: #fff
+  }
+
+  section.gallery {
+      background: radial-gradient(circle, #b3b2b2 1.8px, transparent 2.4px) 0 0/24px 24px, var(--gray)
+  }
+
+  .team-card {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 420px;
+      background: var(--blue);
+      border-radius: 28px 28px 0 0
+  }
+
+  @media(max-width:767px) {
+      .team-card {
+          display: block;
+          min-height: 0;
+          overflow: hidden
+      }
+  }
+
+  html {
+      scroll-behavior: smooth
+  }
+
+  body {
+      color: #162f44;
+  }
+
+  .container {
+      width: calc(100% - 9%);
+      max-width: 1500px
+  }
+
+  h1,
+  h2,
+  h3 {
+      font-weight: 400
+  }
+
+  .topbar {
+      padding: 10px 0;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      background: var(--blue);
+      font-size: 17px
+  }
+
+  .topbar .container {
+      gap: 12px !important
+  }
+
+  .socials {
+      gap: 20px;
+      padding: 6px 10px;
+  }
+
+  .socials a {
+      width: 28px;
+      height: 28px;
+      font-size: 17px
+  }
+
+  .main-nav:not(.is-fixed) {
+      box-shadow: none
+  }
+
+  .main-nav .container {
+      min-height: 100px
+  }
+
+  .navbar-brand img {
+      height: 100px
+  }
+
+  .main-nav .nav-link {
+      font-size: 18px;
+      font-weight: 400;
+      color: #171717;
+      margin: 0 18px
+  }
+
+  .main-nav .nav-link.active {
+      color: #171717
+  }
+
+  .btn-gold {
+      padding: 12px 21px;
+      background: var(--gold);
+      border-color: var(--gold);
+      font-size: 18px;
+      font-weight: 500
+  }
+
+  .hero {
+      min-height: 725px;
+      background-image: url("assets/inner-imgages/banner-img.png");
+      background-position: center;
+      background-size: cover;
+      align-items: flex-end;
+      padding-bottom: 56px
+  }
+
+  .hero:before {
+      background: linear-gradient(0deg, rgba(0, 0, 0, .54), transparent 67%)
+  }
+
+  .hero p {
+      max-width: 780px;
+      font-size: clamp(21px, 1.75vw, 30px);
+      line-height: 1.2;
+      margin-top: 14px !important
+  }
+
+  .hero-play {
+      width: 62px;
+      height: 62px;
+      background: #ffffff77;
+      color: #fff;
+      font-size: 26px
+  }
+
+  .video-modal {
+      background: #000;
+      border: 0;
+      border-radius: 8px
+  }
+
+  .video-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      opacity: 1;
+      z-index: 2
+  }
+
+  .video-modal .ratio {
+      border-radius: 8px;
+      overflow: hidden
+  }
+
+  .why .row {
+      gap: 0
+  }
+
+  .why h2 {
+      font-size: clamp(64px, 5.7vw, 100px);
+      line-height: .99;
+      margin-bottom: 20px
+  }
+
+  .why p {
+      font-size: 18px;
+      line-height: 28px;
+      color: #101010;
+      text-align: justify;
+  }
+
+  .tooth-portrait {
+      max-width: 650px;
+      display: block;
+      margin: auto
+  }
+
+  .services {
+      background-color: #e3e3e3;
+      margin-top: 20px;
+      padding: 60px 0 60px
+  }
+
+  .services h2 {}
+
+  .service-row {
+      min-height: 480px
+  }
+
+  .services .service-tile {
+      height: 400px;
+      min-height: 400px;
+  }
+
+  .service-copy {
+      padding: 45px clamp(45px, 6vw, 115px)
+  }
+
+  .service-copy.blue {
+      background: var(--blue)
+  }
+
+  .service-copy.gray {
+      background: var(--gray)
+  }
+
+  .service-copy h3 {
+      font-size: clamp(34px, 3vw, 54px);
+      line-height: 1.06;
+      font-weight: 400
+  }
+
+  .service-copy p {
+      font-size: 23px;
+      line-height: 1.27;
+      max-width: 520px
+  }
+
+  .service-visual,
+  .service-photo {
+      min-height: 480px;
+      height: 480px
+  }
+
+  .service-photo {
+      object-fit: cover
+  }
+
+  .team h2 {
+      font-size: 42px;
+      line-height: 1.15;
+      font-weight: 600;
+      letter-spacing: 0;
+      margin: 0 0 30px;
+  }
+
+  .team-copy {
+      padding: 70px 6%;
+      width: 63%
+  }
+
+  .team-copy h3 {
+      font-size: 34px;
+      font-weight: 500;
+      text-align: left;
+      line-height: 1.12;
+      letter-spacing: 0
+  }
+
+  .team-copy p {
+      font-size: 18px;
+      line-height: 32px;
+      text-align: justify;
+  }
+
+  .team-img {
+      height: 130%;
+      max-height: 690px;
+      max-width: 40%;
+      right: 4%
+  }
+
+  .gallery {
+      margin-top: 20px;
+      background: var(--gray) url("assets/pattern.png") center/cover no-repeat;
+      padding: 60px 0 60px;
+  }
+
+  .gallery h2 {
+      line-height: 1.2;
+      letter-spacing: 0;
+      margin-bottom: 30px
+  }
+
+  #insurance {
+      padding: 60px 0 0;
+  }
+
+  #insurance .insurance-card {
+      background-image: url("assets/insurance.png") !important
+  }
+
+  #insurance h2 {
+      font-weight: 600;
+      font-size: 42px
+  }
+
+  #insurance p {
+      font-size: 20px;
+      line-height: 1.25
+  }
+
+  .cta {
+      background: var(--blue);
+      padding: 60px 0 60px
+  }
+
+  .cta h2 {
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 1.04
+  }
+
+  .cta p {
+      font-size: 20px
+  }
+
+  .footer {
+      background: var(--navy);
+      color: #fff;
+      padding: 50px 0 0px;
+  }
+
+  .footer:before,
+  .footer:after {
+      display: none !important
+  }
+
+  .footer-reference {
+      position: relative;
+      display: grid;
+      grid-template-columns: 30% 48% 22%;
+      gap: 0;
+      font-size: 18px;
+      line-height: 1.3
+  }
+
+  .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 16px;
+  }
+
+  .footer-brand img {
+      width: 112px;
+      height: 112px;
+      object-fit: contain
+  }
+
+  .footer address {
+      font-style: normal;
+      font-size: 17px
+  }
+
+  .footer address p {
+      margin: 0 0 14px;
+      line-height: 1.3;
+      position: relative;
+      padding-left: 22px
+  }
+
+  .footer address i {
+      position: absolute;
+      left: 0;
+      top: 2px
+  }
+
+  .footer a {
+      color: #fff
+  }
+
+  .footer-services {
+      padding: 20px 10px 0
+  }
+
+  .footer-services h4 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 0 20px
+  }
+
+  .footer-service-columns {
+      display: grid;
+      grid-template-columns: 1fr 1.55fr;
+      gap: 25px
+  }
+
+  .footer-services ul {
+      list-style: none;
+      padding: 0;
+      margin: 0
+  }
+
+  .footer-services li {
+      margin-bottom: 14px;
+      font-size: 17px;
+      white-space: nowrap
+  }
+
+  .footer-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 0 0 75px;
+      align-items: end;
+  }
+
+  .footer-right small {
+      font-size: 15px
+  }
+
+  .footer-right p {
+      font-size: 18px;
+      line-height: 1.25
+  }
+
+  .footer-socials {
+      display: flex;
+      gap: 10px;
+      font-size: 28px
+  }
+
+  .footer-bottom {
+      margin-top: 8px;
+      padding: 18px 0;
+      border-top: 1px solid rgba(255, 255, 255, .2);
+      text-align: center
+  }
+
+  .footer-bottom p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.5
+  }
+
+  .footer-bottom a {
+      text-decoration: underline
+  }
+
+  @media(max-width:991px) {
+      .container {
+          width: calc(100% - 40px)
+      }
+
+      .topbar {
+          height: 45px
+      }
+
+      .main-nav .container {
+          min-height: 82px
+      }
+
+      .hero {
+          min-height: 620px
+      }
+
+      .why h2 {
+          font-size: 58px
+      }
+
+      .why p {
+          font-size: 21px
+      }
+
+      .service-row,
+      .service-visual,
+      .service-photo {
+          min-height: 360px;
+          height: auto
+      }
+
+      .services .service-tile {
+          height: 360px;
+          min-height: 360px
+      }
+
+      .service-photo {
+          height: 360px
+      }
+
+      .service-copy p {
+          font-size: 20px
+      }
+
+      .footer-reference {
+          grid-template-columns: 1fr 1.5fr;
+          gap: 10px
+      }
+
+      .footer-right {
+          grid-column: 1/-1;
+          flex-direction: row;
+          padding: 0;
+          align-items: center
+      }
+  }
+
+  @media(max-width:767px) {
+      .services {
+          background-color: #e3e3e3;
+          margin-top: 75px;
+          padding: 30px 0 30px !important;
+      }
+
+      .padding-bottom-30 {
+          padding-bottom: 12px;
+      }
+
+      .topbar {
+          font-size: 13px
+      }
+
+      .navbar-brand img {
+          width: 70px;
+          height: 70px
+      }
+
+      .hero {
+          min-height: 570px;
+          padding-bottom: 45px
+      }
+
+      .hero h1 {
+          font-size: 58px
+      }
+
+      .hero p {
+          font-size: 17px !important;
+          line-height: 25px;
+      }
+
+      .hero-play {
+          top: 43%
+      }
+
+      .why h2 {
+          font-size: 50px
+      }
+
+      .why p {
+          font-size: 19px
+      }
+
+      .services {
+          margin-top: 35px
+      }
+
+      .services h2 {
+          font-size: 40px
+      }
+
+      .service-row {
+          min-height: 0
+      }
+
+      .services .service-tile {
+          height: auto;
+          min-height: 0
+      }
+
+      .services .service-copy {
+          min-height: 280px
+      }
+
+      .service-copy {
+          padding: 38px
+      }
+
+      .service-visual,
+      .service-photo {
+          height: 300px;
+          min-height: 300px
+      }
+
+      .team {
+          padding: 60px 0
+      }
+
+      .team h2 {
+          font-size: 40px
+      }
+
+      .team-copy {
+          width: 100%;
+          padding: 35px
+      }
+
+      .team-copy p {
+          font-size: 19px
+      }
+
+      .team-img {
+          position: relative;
+          display: block;
+          height: 350px;
+          max-width: 90%;
+          margin: auto;
+          right: auto
+      }
+
+      .gallery {
+          margin-top: 30px
+      }
+
+      .footer-reference {
+          grid-template-columns: 1fr
+      }
+
+      .footer-right {
+          grid-column: auto
+      }
+
+      .footer-service-columns {
+          grid-template-columns: 1fr 1fr
+      }
+
+      .footer-services li {
+          white-space: normal;
+          font-size: 14px
+      }
+
+      .footer-brand {
+          margin-bottom: 30px
+      }
+  }
+
+  /* Copy and photo tiles in a row always share one height: the row grows with the copy,
+       and the photo covers its whole tile so no empty strip shows beneath it. */
+  #services .service-row {
+      min-height: 0
+  }
+
+  #services .service-visual.service-tile {
+      position: relative
+  }
+
+  #services .service-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      object-fit: cover;
+      object-position: center
+  }
+
+  @media (min-width: 768px) {
+      #services .service-tile {
+          height: 100%;
+          min-height: clamp(300px, 26vw, 440px)
+      }
+  }
+
+  @media (max-width: 767.98px) {
+      #services .service-copy.service-tile {
+          height: auto;
+          min-height: 0
+      }
+
+      #services .service-visual.service-tile {
+          height: clamp(220px, 60vw, 300px);
+          min-height: 0
+      }
+  }
+
+  /* Type scale for tablet and mobile. !important so it wins over the section-specific sizes above. */
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+      h1 {
+          font-size: 36px !important;
+      }
+
+      h2 {
+          font-size: 28px !important;
+      }
+
+      h3 {
+          font-size: 24px !important;
+      }
+
+      h4 {
+          font-size: 21px !important;
+      }
+
+      h5 {
+          font-size: 19px !important;
+      }
+
+      h6 {
+          font-size: 17px !important;
+      }
+
+      p {
+          font-size: 16px !important;
+      }
+  }
+
+  @media (max-width: 767.98px) {
+      h1 {
+          font-size: 32px !important;
+      }
+
+      h2 {
+          font-size: 24px !important;
+          line-height: 30px !important;
+      }
+
+      .footer-right p {
+          line-height: 26px;
+      }
+
+      h3 {
+          font-size: 22px !important;
+          font-weight: 800 !important;
+      }
+
+      h4 {
+          font-size: 18px !important;
+          font-weight: 700 !important;
+      }
+
+      h5 {
+          font-size: 18px !important;
+          font-weight: 600 !important;
+      }
+
+      h6 {
+          font-size: 16px !important;
+      }
+
+      p {
+          font-size: 15px !important;
+      }
+  }
+
+  /* Anchor jumps land below the pinned menu bar instead of under it. */
+  [id] {
+      scroll-margin-top: 130px
+  }
+
+  .footer-services li a:hover {
+      color: var(--gold)
+  }
+
+  /* Final tablet/phone fixes. Kept last so they win over the earlier overlapping breakpoints. */
+  @media (max-width: 991.98px) {
+      .footer-services li {
+          white-space: normal
+      }
+
+      .why .tooth-portrait {
+          margin-top: 0px
+      }
+
+      .footer-services {
+          margin-top: -16px;
+      }
+
+      .footer-services h4 {
+          margin: 0 0 12px;
+      }
+  }
+
+  @media (max-width: 767.98px) {
+
+      /* Play button sits centred in the photo, above the heading. */
+      .hero-play {
+          left: 50%;
+          right: auto;
+          top: 24%;
+          bottom: auto;
+          transform: translate(-50%, -50%);
+          width: 58px;
+          height: 58px;
+          font-size: 24px
+      }
+
+      #services .service-photo {
+          object-position: top !important;
+      }
+
+      .hero {
+          min-height: 300px;
+          padding-bottom: 36px
+      }
+
+      .navbar-brand img {
+          width: auto;
+          height: 64px
+      }
+
+      .main-nav .container {
+          min-height: 76px
+      }
+
+      .gallery {
+          margin-top: 0;
+          padding: 48px 0 56px
+      }
+
+      .gallery h2 {
+          margin-bottom: 12px
+      }
+
+      #insurance {
+          padding: 40px 0 10px
+      }
+
+      .team-copy {
+          padding-bottom: 0
+      }
+
+      .team-img {
+          height: auto;
+          max-height: 340px;
+          margin-top: 0
+      }
+
+      .footer {
+          padding-top: 40px
+      }
+
+      .footer-brand {
+          font-size: 20px;
+          margin-bottom: 12px;
+      }
+
+      .footer-brand img {
+          width: 80px;
+          height: 80px
+      }
+
+      .footer-services {
+          padding: 10px 0 0
+      }
+
+      .footer address,
+      .footer address a {
+          overflow-wrap: anywhere
+      }
+
+      .footer-right {
+          flex-wrap: wrap;
+          gap: 16px;
+          padding: 10px 0 30px;
+          justify-content: space-between
+      }
+
+      /* .footer-right p {
+        font-size: 16px;
+        margin: 0
+      } */
+
+      .cta .btn-gold {
+          font-size: 17px
+      }
+
+      .video-close {
+          top: -36px
+      }
+
+      .container {
+          width: calc(100% - 30px) !important;
+      }
+  }
+
+  @media (max-width: 575.98px) {
+
+      /* Top bar wraps onto two lines instead of overflowing on narrow phones. */
+      .topbar {
+          height: auto;
+          padding: 8px 0
+      }
+
+      .topbar .container {
+          flex-wrap: wrap;
+          row-gap: 6px !important
+      }
+
+      .topbar .socials {
+          gap: 10px
+      }
+
+      .topbar .socials a {
+          width: 24px;
+          height: 24px;
+          font-size: 13px
+      }
+
+      .hero {}
+
+      br {
+          display: none;
+      }
+
+      .cta h2 br {
+          display: none
+      }
+
+      .footer-service-columns {
+          gap: 0
+      }
+
+      .btn-gold {
+          font-size: 17px
+      }
+  }
+
+  /* @media (max-width:394px) {
+      .hero {
+        min-height: 426px !important;
+      }
+    } */
+
+  /* Footer layout: let Bootstrap's 12-column row own the three columns. */
+  .footer-reference {
+      display: block;
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.5;
+  }
+
+  .footer-reference>.row>* {
+      min-width: 0;
+  }
+
+  .footer-brand {
+      gap: 12px;
+      line-height: 1.15;
+  }
+
+  .footer-brand img {
+      width: 88px;
+      height: 88px;
+      flex: 0 0 88px;
+  }
+
+  .footer-address address a {
+      overflow-wrap: anywhere;
+  }
+
+  .footer-services {
+      padding: 12px 0 0;
+  }
+
+  .footer-service-columns {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+  }
+
+  .footer-services li {
+      white-space: normal;
+      line-height: 1.45;
+  }
+
+  .footer-right {
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 30px;
+      padding: 12px 0 0;
+      align-items: end;
+  }
+
+  .footer-right p {
+      margin: 8px 0 0;
+      line-height: 36px;
+  }
+
+  .footer-bottom {
+      display: block;
+      margin-top: 10px;
+  }
+
+  @media (max-width: 991.98px) {
+      .footer-right {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 12px 48px;
+      }
+  }
+
+  @media (max-width: 575.98px) {
+      .footer-service-columns {
+          gap: 0;
+      }
+
+      .footer-brand img {
+          width: 72px;
+          height: 72px;
+          flex-basis: 72px;
+      }
+
+      .footer-right {
+          align-items: flex-start;
+          padding: 0;
+      }
+
+      .footer-bottom {
+          margin-top: 10px;
+      }
+  }
+
+  /* Mobile hero: eyebrow, two-line title and a full-width booking action. */
+  @media (max-width: 767.98px) {
+      .footer-right p {
+          margin: 0px 0 0;
+          line-height: 30px;
+      }
+
+      .hero {
+          padding-bottom: 32px;
+          background-position: 62% center;
+      }
+
+      .hero:before {
+          background: linear-gradient(0deg, rgba(10, 24, 36, .85) 0%, rgba(10, 24, 36, .45) 45%, transparent 75%)
+      }
+
+      .hero h1 {
+          font-size: 32px !important;
+          line-height: 1.08;
+          letter-spacing: 0;
+          text-shadow: 0 2px 12px rgba(0, 0, 0, .35)
+      }
+
+      .hero-actions {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 12px;
+          margin-top: 16px;
+          width: fit-content;
+      }
+
+      .hero-actions .btn-gold {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 10px 20px;
+          border-radius: 10px;
+          font-size: 15px;
+          box-shadow: 0 6px 18px rgba(0, 0, 0, .25)
+      }
+
+      .hero-play {
+          left: 50% !important;
+          right: auto !important;
+          top: 40% !important;
+          bottom: auto !important;
+          transform: translate(-50%, -50%) !important;
+          width: 60px;
+          height: 60px
+      }
+  }
+
+  @media (max-width:400px) {
+      .hero h1 {
+          font-size: 24px !important;
+      }
+  }
