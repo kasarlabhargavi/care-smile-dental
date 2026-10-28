@@ -64,7 +64,8 @@
             <li class="nav-item"><a class="nav-link" href="#insurance">Insurance</a></li>
             <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          </ul><a class="btn btn-gold" href="tel:+14082384220">Book Appointment</a>
+          </ul><button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book
+            Appointment</button>
         </div>
       </div>
     </div>
@@ -78,8 +79,10 @@
           your comfort and long-term oral health.
         </p>
         <div class="hero-actions d-md-none">
-          <a class="btn btn-gold" href="tel:+14082384220"><i class="bi bi-calendar-check" aria-hidden="true"></i>
-            Book Appointment</a>
+          <button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#appointmentModal"><i
+              class="bi bi-calendar-check" aria-hidden="true"></i>
+            Book Appointment
+          </button>
         </div>
       </div><button class="hero-play" type="button" aria-label="Play our dental clinic video" data-bs-toggle="modal"
         data-bs-target="#videoModal"><i class="bi bi-play-fill" aria-hidden="true"></i></button>
@@ -93,6 +96,109 @@
             <iframe id="videoFrame" data-src="https://www.youtube.com/embed/jK5ErwOue7Q?autoplay=1&rel=0"
               title="Dental clinic video" allow="autoplay; encrypted-media; picture-in-picture"
               allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade appointment-modal" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <button type="button" class="btn-close appointment-close" data-bs-dismiss="modal"
+            aria-label="Close appointment form"></button>
+          <div class="modal-body">
+            <h2 id="appointmentTitle">Book Your Dental Appointment</h2>
+            <p class="appointment-intro">Share your details, and our team will contact you to confirm your appointment.
+            </p>
+            <form class="appointment-form" method="post" enctype="text/plain">
+              <div class="appointment-fields">
+                <div class="appointment-field">
+                  <label for="appointmentName">Full name*</label>
+                  <input class="form-control" id="appointmentName" name="Full name" type="text"
+                    placeholder="Enter your full name" autocomplete="name" required>
+                </div>
+                <div class="appointment-field">
+                  <label for="appointmentPhone">Mobile Phone*</label>
+                  <input class="form-control" id="appointmentPhone" name="Mobile phone" type="tel"
+                    placeholder="Enter your mobile number" autocomplete="tel" required>
+                </div>
+                <div class="appointment-field appointment-field-wide">
+                  <label for="appointmentEmail"> Email Address*</label>
+                  <input class="form-control" id="appointmentEmail" name="Email" type="email"
+                    placeholder="Enter your email address" autocomplete="email" required>
+                </div>
+                <div class="appointment-field appointment-field-wide">
+                  <label for="appointmentService">What Can We Help You With?</label>
+                  <select class="form-select" id="appointmentService" name="Service" required>
+                    <option value="" selected disabled>Select a service</option>
+                    <option value="General Dentistry">General Dentistry</option>
+                    <option value="Dental Cleaning">Dental Cleaning</option>
+                    <option value="Teeth Whitening">Teeth Whitening</option>
+                    <option value="Root Canal Treatment">Root Canal Treatment</option>
+                    <option value="Dental Implants">Dental Implants</option>
+                    <option value="Braces & Orthodontics">Braces & Orthodontics</option>
+                    <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                    <option value="Tooth Extraction">Tooth Extraction</option>
+                    <option value="Crowns & Bridges">Crowns & Bridges</option>
+                    <option value="Dentures">Dentures</option>
+                    <option value="Children's Dentistry">Children's Dentistry</option>
+                    <option value="Emergency Dental Care">Emergency Dental Care</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <fieldset class="appointment-choice">
+                  <legend>Preferred Appointment Time*</legend>
+                  <div class="appointment-options">
+                    <input class="appointment-radio" type="radio" name="Best time" id="appointmentMorning"
+                      value="Morning" checked required>
+                    <label for="appointmentMorning">Morning</label>
+                    <input class="appointment-radio" type="radio" name="Best time" id="appointmentAfternoon"
+                      value="Afternoon" required>
+                    <label for="appointmentAfternoon">Afternoon</label>
+                    <input class="appointment-radio" type="radio" name="Best time" id="appointmentEvening"
+                      value="Evening" required>
+                    <label for="appointmentEvening">Evening</label>
+                  </div>
+                </fieldset>
+                <fieldset class="appointment-choice">
+                  <legend>Are You a New or Existing Patient?*</legend>
+                  <div class="appointment-options">
+                    <input class="appointment-radio" type="radio" name="Patient type" id="appointmentNew"
+                      value="New patient" checked required>
+                    <label for="appointmentNew">New Patient</label>
+                    <input class="appointment-radio" type="radio" name="Patient type" id="appointmentExisting"
+                      value="Existing patient" required>
+                    <label for="appointmentExisting">Existing Patient</label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="appointment-consents">
+                <label class="appointment-consent" for="appointmentSms">
+                  <input id="appointmentSms" name="Transactional SMS consent" type="checkbox" value="Yes">
+                  <span>By checking this box, I consent to receive transactional text messages from Care Smile Dental at
+                    the mobile number provided, including appointment confirmations, reminders, and scheduling updates.
+                    Message and data rates may apply. Message frequency varies. Reply STOP to opt out or HELP for
+                    assistance. Consent is not a condition of purchase. Please review our Privacy Policy and Terms of
+                    Service.
+                  </span>
+                </label>
+                <label class="appointment-consent" for="appointmentMarketing">
+                  <input id="appointmentMarketing" name="Promotional SMS consent" type="checkbox" value="Yes">
+                  <span>By checking this box, I consent to receive promotional text messages from Care Smile Dental,
+                    including special offers, dental care tips, and practice updates. Message and data rates may apply.
+                    Message frequency varies. Reply STOP to opt out or HELP for assistance. Consent is not a condition
+                    of purchase. Please review our Privacy Policy and Terms of Service.
+                  </span>
+                </label>
+              </div>
+              <button class="appointment-submit" type="submit">Book my appointment</button>
+              <p class="appointment-note">By submitting this form, you agree that Care Smile Dental may contact you
+                regarding your appointment request and provide relevant updates. You can opt out of promotional
+                communications at any time.
+              </p>
+              <p class="appointment-insurance-note"><b>Need assistance?</b> Contact our team, and we will be happy to help
+                you schedule your visit.</p>
+            </form>
           </div>
         </div>
       </div>
@@ -599,8 +705,8 @@
     <section class="cta">
       <div class="container">
         <h2>Redefining Your Dental Care Experience</h2>
-        <p>Start Your Smile Journey In San Jose Today</p><a class="btn btn-gold" href="tel:+14082384220">Schedule
-          Consultation</a>
+        <p>Start Your Smile Journey In San Jose Today</p><button class="btn btn-gold" type="button"
+          data-bs-toggle="modal" data-bs-target="#appointmentModal">Schedule Consultation</button>
       </div>
     </section>
   </main>
@@ -654,7 +760,7 @@
                 href="https://www.google.com/search?q=Care+Smile+Dental+San+Jose" aria-label="Google"><i
                   class="bi bi-google"></i></a></div>
             <div><small>Business Hours</small>
-              <p>Monday - Friday<br>9:00am to 5:00pm</p>
+              <p>Monday - Friday<br>9:00am to 5:30pm</p>
             </div>
           </div>
         </div>
@@ -692,12 +798,12 @@
       let moving = false;
       let timer;
       const position = () => cards[index].offsetLeft - cards[0].offsetLeft;
-      const reset = () => track.scrollTo({left: position(), behavior: 'instant'});
+      const reset = () => track.scrollTo({ left: position(), behavior: 'instant' });
       const move = direction => {
         if (moving) return;
         moving = true;
         index += direction;
-        track.scrollTo({left: position(), behavior: 'smooth'});
+        track.scrollTo({ left: position(), behavior: 'smooth' });
         window.setTimeout(() => {
           if (index >= count * 2) index -= count;
           if (index < count) index += count;
@@ -716,7 +822,7 @@
         });
       });
       document.addEventListener('visibilitychange', play);
-      new ResizeObserver(() => {if (!moving) reset();}).observe(track);
+      new ResizeObserver(() => { if (!moving) reset(); }).observe(track);
       reset();
       play();
     })();
@@ -739,9 +845,9 @@
     // Load the video only while the popup is open, so closing it stops playback.
     const videoModal = document.getElementById('videoModal');
     const videoFrame = document.getElementById('videoFrame');
-    videoModal.addEventListener('show.bs.modal', () => {videoFrame.src = videoFrame.dataset.src;});
-    videoModal.addEventListener('hidden.bs.modal', () => {videoFrame.src = '';});
-    window.addEventListener('scroll', updateNav, {passive: true});
+    videoModal.addEventListener('show.bs.modal', () => { videoFrame.src = videoFrame.dataset.src; });
+    videoModal.addEventListener('hidden.bs.modal', () => { videoFrame.src = ''; });
+    window.addEventListener('scroll', updateNav, { passive: true });
     window.addEventListener('resize', updateNav);
     updateNav();
   </script>
@@ -796,7 +902,7 @@
         }
       };
       gallery.querySelectorAll('[data-care-direction]').forEach(button => {
-        button.addEventListener('click', () => {move(Number(button.dataset.careDirection)); play();});
+        button.addEventListener('click', () => { move(Number(button.dataset.careDirection)); play(); });
       });
       gallery.addEventListener('mouseenter', stop);
       gallery.addEventListener('mouseleave', play);
